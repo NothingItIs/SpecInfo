@@ -1,0 +1,9 @@
+Name                                            NumberOfCores NumberOfLogicalProcessors MaxClockSpeed
+----                                            ------------- ------------------------- -------------
+AMD Ryzen 5 3400G with Radeon Vega Graphics                 4                         8          3700
+
+  Capacity Speed Manufacturer PartNumber
+  -------- ----- ------------ ----------
+8589934592  2133 Unknown      TEAMGROUP-UD4-2666
+8589934592  2133 Unknown      TEAMGROUP-UD4-2666
+8589934592  2133 Unknown      TEAMGROUP-UD4-2666

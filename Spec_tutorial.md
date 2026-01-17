@@ -55,14 +55,14 @@ Also note manually:
 
 #### A. CPU + RAM
 
-Run:
+Open **PowerShell (Admin)** and run:
 
 ```
-(Open PowerShell as Administrator)
-
 Get-CimInstance Win32_Processor |
 Select-Object Name, NumberOfCores, NumberOfLogicalProcessors, MaxClockSpeed
-
+```
+and
+```
 Get-CimInstance Win32_PhysicalMemory |
 Select-Object Capacity, Speed, Manufacturer, PartNumber
 ```
@@ -74,8 +74,13 @@ Save as `cpu_ram.txt`
 Run:
 
 ```
-wmic baseboard get product,manufacturer
-wmic bios get smbiosbiosversion,releasedate
+Get-CimInstance Win32_BaseBoard |
+Select-Object Manufacturer, Product
+```
+and
+```
+Get-CimInstance Win32_BIOS |
+Select-Object SMBIOSBIOSVersion, ReleaseDate
 ```
 
 Save as `board_bios.txt`
