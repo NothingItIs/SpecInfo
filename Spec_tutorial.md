@@ -1,12 +1,5 @@
 # How to Recreate a Full System Diagnostic File (Unified All‑in‑One Version)
 
-This guide explains how to recreate **the exact same diagnostic report** as the reference, but with **one single master file** used for *all collected information* (except `dxdiag`, which must remain its own file due to Windows limitations).
-
-**No instructions are removed, changed, or added.**
-Only file handling, wording, and structure are refactored to eliminate multiple files while preserving **identical data, scope, and intent**. fileciteturn0file0
-
----
-
 ## PART A — WHAT YOU ARE RECREATING
 
 You are rebuilding a **consolidated system diagnostic report** composed of:
@@ -19,6 +12,7 @@ You are rebuilding a **consolidated system diagnostic report** composed of:
 All inputs are **normalized into one structured master text file** with:
 
 • Fixed section order
+• One section per command or capture
 • Consistent labels
 • Human‑readable explanations
 
@@ -38,27 +32,41 @@ Inside this folder, create **ONE file only**:
 FULL_SYSTEM_DIAGNOSTIC.txt
 ```
 
-In that file, copy paste the following format to update as yo uread on:
+Paste the following base structure into that file **before collecting any data**:
 
 ```
 ==============================
-SYSTEM OVERVIEW — RAW SYSTEMINFO OUTPUT
+SYSTEM OVERVIEW — SYSTEMINFO
 ==============================
 
 ==============================
-CPU, RAM, MOTHERBOARD & BIOS — RAW CIM OUTPUT
+CPU INFORMATION — CIM
 ==============================
 
 ==============================
-STORAGE DEVICES & SMART DATA
+MEMORY INFORMATION — CIM
 ==============================
 
 ==============================
-NETWORK CONFIGURATION — RAW IPCONFIG OUTPUT
+MOTHERBOARD INFORMATION — CIM
+==============================
+
+==============================
+BIOS INFORMATION — CIM
+==============================
+
+==============================
+STORAGE PERFORMANCE — WINSAT DISK
+==============================
+
+==============================
+NETWORK CONFIGURATION — IPCONFIG
 ==============================
 ```
 
-All outputs (except dxdiag) are written **directly into this file under their respective sections**.
+All text-based outputs are written **directly into this file under their matching section**.
+
+Screenshots are saved externally in `PC_DIAGNOSTICS_RAW`.
 
 Use **Windows PowerShell (Run as Administrator)** for all commands.
 
@@ -66,7 +74,7 @@ Use **Windows PowerShell (Run as Administrator)** for all commands.
 
 ## PART C — DATA COLLECTION (ALL STEPS ARE MANDATORY)
 
-### 1️⃣ SYSTEM OVERVIEW
+### 1️⃣ SYSTEM OVERVIEW — SYSTEMINFO
 
 Run:
 
@@ -78,43 +86,77 @@ Action:
 
 • Select **all output**
 • Copy
-• Paste **under the section:**
+• Paste under:
 
 ```
-==============================
-SYSTEM OVERVIEW — RAW SYSTEMINFO OUTPUT
-==============================
+SYSTEM OVERVIEW — SYSTEMINFO
 ```
-
-inside `FULL_SYSTEM_DIAGNOSTIC.txt`
-
-Also manually record the following **under the same section**:
-
-• PC name
-• Windows edition
-• Install date
-• Time zone
 
 ---
 
-### 2️⃣ CPU, RAM, MOTHERBOARD, BIOS
+### 2️⃣ CPU INFORMATION — CIM
 
-Run the following commands **one by one**:
+Run:
 
 ```
 Get-CimInstance Win32_Processor |
 Select-Object Name, NumberOfCores, NumberOfLogicalProcessors, MaxClockSpeed
 ```
 
+Action:
+
+• Copy output
+• Paste under:
+
+```
+CPU INFORMATION — CIM
+```
+
+---
+
+### 3️⃣ MEMORY INFORMATION — CIM
+
+Run:
+
 ```
 Get-CimInstance Win32_PhysicalMemory |
 Select-Object Capacity, Speed, Manufacturer, PartNumber
 ```
 
+Action:
+
+• Copy output
+• Paste under:
+
+```
+MEMORY INFORMATION — CIM
+```
+
+---
+
+### 4️⃣ MOTHERBOARD INFORMATION — CIM
+
+Run:
+
 ```
 Get-CimInstance Win32_BaseBoard |
 Select-Object Manufacturer, Product
 ```
+
+Action:
+
+• Copy output
+• Paste under:
+
+```
+MOTHERBOARD INFORMATION — CIM
+```
+
+---
+
+### 5️⃣ BIOS INFORMATION — CIM
+
+Run:
 
 ```
 Get-CimInstance Win32_BIOS |
@@ -123,20 +165,16 @@ Select-Object SMBIOSBIOSVersion, ReleaseDate
 
 Action:
 
-• Copy each output
-• Paste **under the section:**
+• Copy output
+• Paste under:
 
 ```
-==============================
-CPU, RAM, MOTHERBOARD & BIOS — RAW CIM OUTPUT
-==============================
+BIOS INFORMATION — CIM
 ```
-
-inside `FULL_SYSTEM_DIAGNOSTIC.txt`
 
 ---
 
-### 3️⃣ GRAPHICS (GPU)
+### 6️⃣ GPU INFORMATION — DXDIAG
 
 Press **Win + R**, type:
 
@@ -146,7 +184,7 @@ dxdiag
 
 Action:
 
-• Wait for dxdiag to fully load
+• **Wait 10–30 seconds** for dxdiag to fully load (it may appear unresponsive — this is normal)
 • Click **Save All Information**
 • Save as:
 
@@ -160,34 +198,36 @@ Location:
 PC_DIAGNOSTICS_RAW\dxdiag.txt
 ```
 
-Additional required action:
-
-• Take a screenshot of GPU temperature and usage from **Task Manager → Performance**
-• Do **not** write this into the text file (screenshots are external by design)
+No need to paste dxdiag text into the master file, the file is automatically made.
 
 ---
 
-### 4️⃣ STORAGE DEVICES & SMART HEALTH
+### 7️⃣ GPU THERMALS & USAGE — TASK MANAGER
+
+Action:
+
+• Open **Task Manager → Performance → GPU**
+• Capture a **clear screenshot** showing temperature and usage
+• Save inside `PC_DIAGNOSTICS_RAW`
+• Name clearly (e.g. `GPU_TaskManager.png`)
+
+---
+
+### 8️⃣ STORAGE HEALTH — CRYSTALDISKINFO
 
 Install **CrystalDiskInfo**.
 
-For **each detected drive**, record the following **manually** under:
+For **each detected drive (arrows on the side)**:
 
-```
-==============================
-STORAGE DEVICES & SMART DATA
-==============================
-```
+• Capture a **full-window screenshot** showing drive model, health %, power‑on hours, and host writes
+• Save screenshots inside `PC_DIAGNOSTICS_RAW`
+• Name clearly (e.g. `Disk0_CrystalDiskInfo.png`, `Disk1_CrystalDiskInfo.png`)
 
-inside `FULL_SYSTEM_DIAGNOSTIC.txt`
+---
 
-• Drive model
-• Capacity
-• Health percentage
-• Power‑on hours
-• Host writes
+### 9️⃣ STORAGE PERFORMANCE — WINSAT DISK
 
-Then run:
+Run:
 
 ```
 winsat disk
@@ -195,12 +235,16 @@ winsat disk
 
 Action:
 
-• Copy all output
-• Paste **directly under the same STORAGE section**
+• Copy **all output**
+• Paste under:
+
+```
+STORAGE PERFORMANCE — WINSAT DISK
+```
 
 ---
 
-### 5️⃣ NETWORK CONFIGURATION
+### 🔟 NETWORK CONFIGURATION — IPCONFIG
 
 Run:
 
@@ -210,43 +254,30 @@ ipconfig /all
 
 Action:
 
-• Copy all output
-• Paste **under the section:**
+• Copy **all output**
+• Paste under:
 
 ```
-==============================
-NETWORK CONFIGURATION — RAW IPCONFIG OUTPUT
-==============================
+NETWORK CONFIGURATION — IPCONFIG
 ```
-
-inside `FULL_SYSTEM_DIAGNOSTIC.txt`
 
 ---
 
-## PART D — EXACT SECTION ORDER (DO NOT CHANGE)
+## PART D — CHATGPT FINAL OUTPUT FORMAT (UNCHANGED)
 
-The master file MUST preserve this logical order:
-
-1. System Overview
-2. CPU, RAM, Motherboard, and BIOS
-3. Graphics (GPU) Subsystem
-4. Storage Devices and SMART Analysis
-5. Network Configuration
-6. ChatGPT Evaluation Summary
-7. Recommendations
-8. Final Verdict
-
----
-
-## PART E — CHATGPT FINAL OUTPUT FORMAT (UNCHANGED)
-
-After data collection, ChatGPT MUST generate the **final diagnostic report** using the **exact format below**.
+After data collection, ChatGPT MUST generate the **final diagnostic report** using the **exact format defined in the reference document**.
 
 ONLY values may change.
 **All text, spacing, emojis, bullets, order, and separators remain IDENTICAL.**
 
-(Format block intentionally preserved verbatim from reference document.)
+This is the format, if you want a message send the following with the format below it:
 
+(optional message): 
+```
+Please use these files and the format below to create an all-in-one specs file for my PC.
+```
+
+Format:
 
 ```
 ================== FULL SYSTEM DIAGNOSTIC & CHATGPT EVALUATION ==================
