@@ -1,0 +1,42 @@
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : NothingItIs-PC
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+   DNS Suffix Search List. . . . . . : lan
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : lan
+   Description . . . . . . . . . . . : Realtek Gaming 2.5GbE Family Controller
+   Physical Address. . . . . . . . . : 74-56-3C-CA-53-96
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   IPv6 Address. . . . . . . . . . . : 2a00:23c8:253e:3901::863(Preferred)
+   Lease Obtained. . . . . . . . . . : 18 January 2026 7:21:50 AM
+   Lease Expires . . . . . . . . . . : 19 January 2026 7:21:50 AM
+   IPv6 Address. . . . . . . . . . . : 2a00:23c8:253e:3901:9122:b242:a9e9:9b0b(Preferred)
+   Temporary IPv6 Address. . . . . . : 2a00:23c8:253e:3901:5404:b3ab:6a22:55(Preferred)
+   Link-local IPv6 Address . . . . . : fe80::1115:d26:bb6d:a68b%16(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.1.97(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Lease Obtained. . . . . . . . . . : 17 January 2026 9:33:13 PM
+   Lease Expires . . . . . . . . . . : 18 January 2026 9:33:11 PM
+   Default Gateway . . . . . . . . . : fe80::ba6a:f1ff:fec1:39b0%16
+                                       192.168.1.254
+   DHCP Server . . . . . . . . . . . : 192.168.1.254
+   DHCPv6 IAID . . . . . . . . . . . : 108287548
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2E-41-58-BB-74-56-3C-CA-53-96
+   DNS Servers . . . . . . . . . . . : 192.168.1.254
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Bluetooth Network Connection:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Bluetooth Device (Personal Area Network)
+   Physical Address. . . . . . . . . : 0A-62-30-50-7C-33
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
