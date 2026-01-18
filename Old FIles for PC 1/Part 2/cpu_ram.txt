@@ -1,0 +1,8 @@
+Name                                            NumberOfCores NumberOfLogicalProcessors MaxClockSpeed
+----                                            ------------- ------------------------- -------------
+AMD Ryzen 5 7600 6-Core Processor                           6                        12          3801
+
+   Capacity Speed Manufacturer PartNumber
+   -------- ----- ------------ ----------
+17179869184  6000 Unknown      CMK32GX5M2E6000Z36
+17179869184  6000 Unknown      CMK32GX5M2E6000Z36

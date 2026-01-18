@@ -29,13 +29,15 @@ Create a folder on the target PC named:
 PC_DIAGNOSTICS_RAW
 ```
 
+Use **Windows Powershell run as administrator** for all *Run* steps.
+
 All collected data must be saved inside this folder.
 
 ---
 
 ### 1️⃣ System Overview
 
-Open **Command Prompt (Admin)** and run:
+Run:
 
 ```
 systeminfo
@@ -57,7 +59,7 @@ Also record the following manually:
 
 #### A. CPU + RAM
 
-Open **PowerShell (Admin)** and run:
+Run:
 
 ```
 Get-CimInstance Win32_Processor |
@@ -101,7 +103,7 @@ board_bios.txt
 
 ### 3️⃣ GPU Information
 
-Press **Win + R**, type:
+Press **Win + R**, type: (This might take upto a minuite to load, please wait.)
 
 ```
 dxdiag
