@@ -1,7 +1,0 @@
-Manufacturer                       Product
-------------                       -------
-Micro-Star International Co., Ltd. B450M MORTAR MAX (MS-7B89)
-
-SMBIOSBIOSVersion ReleaseDate
------------------ -----------
-2.B0              11/30/2020 12:00:00 AM
