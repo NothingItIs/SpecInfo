@@ -90,38 +90,11 @@ These settings affect ONLY that game.
 
 ---
 
-### GLOBAL PROFILE (BASELINE – KEEP STABLE)
-
-This profile should stay safe and stable for all apps:
-
-- Power management mode → Normal  
-- Low Latency Mode → Off  
-- Vertical Sync → Use the 3D application setting  
-- Max Frame Rate → Off  
-- Threaded Optimization → Auto  
-- Shader Cache Size → Driver Default  
-
-Do NOT force aggressive settings globally.
-
----
-
 ### COMPETITIVE GAME PROFILE (LOW LATENCY MODE)
 
 Recommended for games like CS2 / Valorant / Apex / Fortnite:
 
-- Power management mode → Prefer maximum performance  
 - Low Latency Mode → ON (NOT Ultra)  
-- Max Frame Rate → Monitor refresh rate – 3  
-  (Example: 162 for 165Hz, 141 for 144Hz)  
-- Vertical Sync → Off  
-- G-SYNC → Enabled  
-- Threaded Optimization → On  
-
-This gives:
-- Low input lag  
-- Stable clocks  
-- No tearing  
-- Smooth frame pacing  
 
 ---
 
@@ -129,43 +102,20 @@ This gives:
 
 Recommended for Cyberpunk / RDR2 / GTA / story games:
 
-- Power management mode → Normal  
-- Low Latency Mode → Off  
+- Power management mode → Normal   
 - Vertical Sync → Use 3D application setting  
 - Max Frame Rate → Off  
-- G-SYNC → Enabled  
-
-This prioritizes smoothness and stability.
 
 ---
 
 ### BENCHMARK PROFILE (3DMARK / TESTING)
 
 Recommended for 3DMark and stress tests:
-
-- Power management mode → Prefer maximum performance  
-- Low Latency Mode → Off  
+ 
 - Vertical Sync → Off  
-- Max Frame Rate → Off  
-- Threaded Optimization → On  
-
-This maximizes benchmark scores.
+- Max Frame Rate → Off   
 
 ---
-
-### ADVANCED (OPTIONAL) – NVIDIA PROFILE INSPECTOR
-
-Advanced users may use **NVIDIA Profile Inspector** to:
-
-- Edit hidden driver flags  
-- Export / backup profiles  
-- Fix broken profiles  
-- Tune G-SYNC / ReBAR behavior  
-
-Use carefully.
-
----
-
 
 ## 🔹 Final Notes
 
