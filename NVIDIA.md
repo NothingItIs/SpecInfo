@@ -74,14 +74,3 @@ This profile is tuned for:
 * G-SYNC monitor (Pixio PXC277A)
 * Low latency + maximum stability
 * Best FPS without stutter or crashes
-
----
-
-Next phase after this:
-➡️ Test Steel Nomad again with:
-
-* Stock
-* 1860 @ 875 mV
-* 1905 @ 900 mV
-
-Then we fine-tune GPU curve + CPU PBO 😈🔥
