@@ -66,15 +66,6 @@ When using this profile:
 
 ---
 
-## 🔹 Final Notes
-
-This profile is tuned for:
-
-* RTX 3080
-* G-SYNC monitor (Pixio PXC277A)
-* Low latency + maximum stability
-* Best FPS without stutter or crashes
-
 ## NVIDIA DRIVER PROFILES (IMPORTANT)
 
 Instead of changing Global settings for every game, use **per-application profiles**.
@@ -175,6 +166,15 @@ Use carefully.
 
 ---
 
-NOTE:
-Never mix aggressive settings in the Global profile.  
-Always use per-game profiles for tuning.
+
+## 🔹 Final Notes
+
+This profile is tuned for:
+
+* RTX 3080
+* G-SYNC monitor (Pixio PXC277A)
+* Low latency + maximum stability
+* Best FPS without stutter or crashes
+* Never mix aggressive settings in the Global profile.  
+* Always use per-game profiles for tuning.
+
