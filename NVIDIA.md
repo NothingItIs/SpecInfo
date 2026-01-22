@@ -74,3 +74,107 @@ This profile is tuned for:
 * G-SYNC monitor (Pixio PXC277A)
 * Low latency + maximum stability
 * Best FPS without stutter or crashes
+
+## NVIDIA DRIVER PROFILES (IMPORTANT)
+
+Instead of changing Global settings for every game, use **per-application profiles**.
+
+This allows:
+- Stable global baseline
+- Competitive profiles for esports
+- Benchmark profiles for 3DMark
+- No conflicts between games
+
+---
+
+### HOW TO CREATE A PROFILE (NVIDIA CONTROL PANEL)
+
+1. Open NVIDIA Control Panel  
+2. Go to: Manage 3D Settings → Program Settings  
+3. Click "Add" and select the game executable (.exe)  
+4. Change settings ONLY for that game  
+5. Click Apply  
+
+These settings affect ONLY that game.
+
+---
+
+### GLOBAL PROFILE (BASELINE – KEEP STABLE)
+
+This profile should stay safe and stable for all apps:
+
+- Power management mode → Normal  
+- Low Latency Mode → Off  
+- Vertical Sync → Use the 3D application setting  
+- Max Frame Rate → Off  
+- Threaded Optimization → Auto  
+- Shader Cache Size → Driver Default  
+
+Do NOT force aggressive settings globally.
+
+---
+
+### COMPETITIVE GAME PROFILE (LOW LATENCY MODE)
+
+Recommended for games like CS2 / Valorant / Apex / Fortnite:
+
+- Power management mode → Prefer maximum performance  
+- Low Latency Mode → ON (NOT Ultra)  
+- Max Frame Rate → Monitor refresh rate – 3  
+  (Example: 162 for 165Hz, 141 for 144Hz)  
+- Vertical Sync → Off  
+- G-SYNC → Enabled  
+- Threaded Optimization → On  
+
+This gives:
+- Low input lag  
+- Stable clocks  
+- No tearing  
+- Smooth frame pacing  
+
+---
+
+### SINGLE-PLAYER / AAA PROFILE (SMOOTH + STABLE)
+
+Recommended for Cyberpunk / RDR2 / GTA / story games:
+
+- Power management mode → Normal  
+- Low Latency Mode → Off  
+- Vertical Sync → Use 3D application setting  
+- Max Frame Rate → Off  
+- G-SYNC → Enabled  
+
+This prioritizes smoothness and stability.
+
+---
+
+### BENCHMARK PROFILE (3DMARK / TESTING)
+
+Recommended for 3DMark and stress tests:
+
+- Power management mode → Prefer maximum performance  
+- Low Latency Mode → Off  
+- Vertical Sync → Off  
+- Max Frame Rate → Off  
+- Threaded Optimization → On  
+
+This maximizes benchmark scores.
+
+---
+
+### ADVANCED (OPTIONAL) – NVIDIA PROFILE INSPECTOR
+
+Advanced users may use **NVIDIA Profile Inspector** to:
+
+- Edit hidden driver flags  
+- Export / backup profiles  
+- Fix broken profiles  
+- Tune G-SYNC / ReBAR behavior  
+
+Use carefully.
+
+---
+
+NOTE:
+Never mix aggressive settings in the Global profile.  
+Always use per-game profiles for tuning.
