@@ -16,10 +16,10 @@
 | GPU Avg Temp (°C)                   | 73                       | 75                           | 73                  |
 | Stability                           | Stable                   | Stable                       | Stable              |
 | ----------------------------------- | ------------------------ | ---------------------------- | ------------------- |
-| + CPU + NVIDIA                      |                          |                              |                     |
-| Score                               |                          |                              |                     |
-| Average FPS                         |                          |                              |                     |
-| GPU Avg Clock (MHz)                 |                          |                              |                     |
-| GPU Max Clock (MHz)                 |                          |                              |                     |
-| GPU Avg Temp (°C)                   |                          |                              |                     |
-| Stability                           |                          |                              |                     |
+| PBO-Man-Simple + NVCP               |                          |                              |                     |
+| Score                               | 4080                     |                              |                     |
+| Average FPS                         | 40.81                    |                              |                     |
+| GPU Avg Clock (MHz)                 | 1755                     |                              |                     |
+| GPU Max Clock (MHz)                 | 1920                     |                              |                     |
+| GPU Avg Temp (°C)                   | 71                       |                              |                     |
+| Stability                           | Stable                   |                              |                     |
