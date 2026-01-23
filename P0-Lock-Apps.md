@@ -13,22 +13,22 @@ Legend:
 | Task Manager                   | NO        | ✅ Safe | Never opens GPU context |
 | Command Prompt / PowerShell    | NO        | ✅ Safe | Used with nvidia-smi |
 | nvidia-smi                     | NO        | ✅ Safe | Diagnostic only |
-
+|--------------------------------|-----------|---------|------------------------------|
 | MSI Afterburner (main window)  | NO        | ✅ Safe | Overlay OFF, monitoring only |
 | Wallpaper Engine (paused)      | NO        | ⚠️ Safe | Safe only when paused / static |
 | Wallpaper Engine (animated)    | YES       | ❌ Bad  | 3D / video wallpapers can lock P0 |
-
+|--------------------------------|-----------|---------|------------------------------|
 | Opera GX (HW Accel OFF)        | NO        | ✅ Safe | Fixed — no longer locks GPU |
 | Opera GX (HW Accel ON)         | YES       | ❌ Bad  | Previously locked GPU at 1710 MHz |
-
+|--------------------------------|-----------|---------|------------------------------|
 | NVIDIA Overlay (disabled)      | NO        | ✅ Safe | Tested, no P0 lock |
 | NVIDIA Overlay (enabled)       | ⚠️ Maybe  | ⚠️ Risk | Can lock if Instant Replay ON |
-
+|--------------------------------|-----------|---------|------------------------------|
 | Gigabyte Control Center (GCC)  | YES       | ❌ Bad  | Dynamic Lighting / monitoring caused P0 |
 | GCC (services disabled)        | NO        | ✅ Fixed | After disabling modules, P8 works |
-
+|--------------------------------|-----------|---------|------------------------------|
 | Windows Update Services        | NO        | ✅ Safe | Not the cause in your case |
-
+|--------------------------------|-----------|---------|------------------------------|
 | ChatGPT (desktop / web)        | NO        | ✅ Safe | Does not open GPU context |
 | Riot Client (launcher idle)   | NO        | ✅ Safe | Tested idle → stays P8 |
 | VALORANT (running / menu)     | YES       | ❌ Bad  | Keeps GPU active while game is open (expected) |
