@@ -29,7 +29,7 @@ Legend:
 | Windows Update Services        | NO        | ✅ Safe | Not the cause in your case |
 |--------------------------------|-----------|---------|------------------------------|
 | ChatGPT (desktop / web)        | NO        | ✅ Safe | Does not open GPU context |
-| Riot Client (launcher idle)   | YES        | ❌ Bad  | P0 - Hardware acccccceleration on |
+| Riot Client (launcher idle)   | YES        | ❌ Bad  | P0 - Hardware acceleration on |
 | VALORANT (running / menu)     | YES       | ❌ Bad  | Keeps GPU active while game is open (expected) |
 |--------------------------------|-----------|---------|------------------------------|
 | 3DMark (idle, no test)        | NO       | ✅ Safe  | No usage at idle |
