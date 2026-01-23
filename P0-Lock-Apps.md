@@ -30,9 +30,10 @@ Legend:
 | Windows Update Services        | NO        | ✅ Safe | Not the cause in your case |
 |--------------------------------|-----------|---------|------------------------------|
 | ChatGPT (desktop / web)        | NO        | ✅ Safe | Does not open GPU context |
-| Riot Client (launcher idle)   | NO        | ✅ Safe | Tested idle → stays P8 |
+| Riot Client (launcher idle)   | YES        | ❌ Bad  | P0 - Hardware acccccceleration on |
 | VALORANT (running / menu)     | YES       | ❌ Bad  | Keeps GPU active while game is open (expected) |
-| 3DMark (idle, no test)        | YES       | ❌ Bad  | Locks P0 even when not benchmarking |
+|--------------------------------|-----------|---------|------------------------------|
+| 3DMark (idle, no test)        | NO       | ✅ Safe  | No usage at idle |
 | 3DMark (running test)         | YES       | ❌ Bad  | Full load, expected P0 behavior |
 
 ---
