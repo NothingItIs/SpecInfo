@@ -21,8 +21,7 @@ Legend:
 | Opera GX (HW Accel OFF)        | NO        | ✅ Safe | Fixed — no longer locks GPU |
 | Opera GX (HW Accel ON)         | YES       | ❌ Bad  | Previously locked GPU at 1710 MHz |
 |--------------------------------|-----------|---------|------------------------------|
-| NVIDIA Overlay (disabled)      | NO        | ✅ Safe | Tested, no P0 lock |
-| NVIDIA Overlay (enabled)       | ⚠️ Maybe  | ⚠️ Risk | Can lock if Instant Replay ON |
+| NVIDIA Overlay                 | NO        | ✅ Safe | Tested, no P0 lock |
 |--------------------------------|-----------|---------|------------------------------|
 | Gigabyte Control Center (GCC)  | YES       | ❌ Bad  | Dynamic Lighting / monitoring caused P0 |
 | GCC (services disabled)        | NO        | ✅ Fixed | After disabling modules, P8 works |
