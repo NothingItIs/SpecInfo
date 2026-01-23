@@ -114,6 +114,8 @@ Recommended for 3DMark and stress tests:
 
 - Max Frame Rate → Off
 - Vertical Sync → Off
+- Texture filtering - Quality: High Quality
+- Texture filtering - Negative LOD bias: Allow
 
 ---
 
