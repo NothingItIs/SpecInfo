@@ -17,9 +17,9 @@
 | Stability                           | Stable                   | Stable                       | Stable              |
 | ----------------------------------- | ------------------------ | ---------------------------- | ------------------- |
 | PBO-Man-Simple + NVCP               |                          |                              |                     |
-| Score                               | 4080                     |                              |                     |
-| Average FPS                         | 40.81                    |                              |                     |
-| GPU Avg Clock (MHz)                 | 1755                     |                              |                     |
-| GPU Max Clock (MHz)                 | 1920                     |                              |                     |
-| GPU Avg Temp (°C)                   | 71                       |                              |                     |
-| Stability                           | Stable                   |                              |                     |
+| Score                               | 4080                     |                              | 4170                |
+| Average FPS                         | 40.81                    |                              | 41.71               |
+| GPU Avg Clock (MHz)                 | 1755                     |                              | 1848                |
+| GPU Max Clock (MHz)                 | 1920                     |                              | 1860                |
+| GPU Avg Temp (°C)                   | 71                       |                              | 68                  |
+| Stability                           | Stable                   |                              | Stable              |
