@@ -102,18 +102,18 @@ Recommended for games like CS2 / Valorant / Apex / Fortnite:
 
 Recommended for Cyberpunk / RDR2 / GTA / story games:
 
-- Power management mode → Normal   
-- Vertical Sync → Use 3D application setting  
-- Max Frame Rate → Off  
+- Max Frame Rate → Off
+- Power management mode → Normal
+- Vertical Sync → Use 3D application setting
 
 ---
 
 ### BENCHMARK PROFILE (3DMARK / TESTING)
 
 Recommended for 3DMark and stress tests:
- 
-- Vertical Sync → Off  
-- Max Frame Rate → Off   
+
+- Max Frame Rate → Off
+- Vertical Sync → Off
 
 ---
 
