@@ -29,11 +29,15 @@ Legend:
 | Windows Update Services        | NO        | ✅ Safe | Not the cause in your case |
 |--------------------------------|-----------|---------|------------------------------|
 | ChatGPT (desktop / web)        | NO        | ✅ Safe | Does not open GPU context |
-| Riot Client (launcher idle)   | YES        | ❌ Bad  | P0 - Hardware acceleration on |
+| Riot Client (HW accel OFF)     | NO        | ✅ Safe | Stays P8 when idle |
+| Riot Client (HW accel ON)      | YES       | ❌ Bad  | P0 – Hardware acceleration on |
 | VALORANT (running / menu)     | YES       | ❌ Bad  | Keeps GPU active while game is open (expected) |
 |--------------------------------|-----------|---------|------------------------------|
-| 3DMark (idle, no test)        | NO       | ✅ Safe  | No usage at idle |
+| 3DMark (idle, no test)         | NO        | ✅ Safe | No usage at idle |
 | 3DMark (running test)         | YES       | ❌ Bad  | Full load, expected P0 behavior |
+|--------------------------------|-----------|---------|------------------------------|
+| Razer Services (background)    | NO        | ✅ Safe | Normal services do not lock GPU |
+| Razer App / RazerAppEngine.exe | YES       | ❌ Bad  | Opens GPU context, locks P0 |
 
 ---
 
