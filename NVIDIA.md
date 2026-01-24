@@ -54,69 +54,108 @@
 
 ---
 
-## 🔹 In-Game Rules (VERY IMPORTANT)
+## 🔹 PER-GAME NVIDIA DRIVER PROFILES (PERFORMANCE MODES)
 
-When using this profile:
+> Rule used:
+>
+> * If a setting is NOT mentioned below → **Keep Global Defaults**
+> * Only change the settings listed for that specific profile
+> * Never modify Global profile for game-specific tuning
 
-* In every game:
-
-  * **V-Sync → OFF**
-  * **NVIDIA Reflex → ON / ON + Boost** (if available)
-  * Do NOT use in-game frame limiter (we already capped in driver)
-
----
-
-## NVIDIA DRIVER PROFILES (IMPORTANT)
-
-Instead of changing Global settings for every game, use **per-application profiles**.
-
-This allows:
-- Stable global baseline
-- Competitive profiles for esports
-- Benchmark profiles for 3DMark
-- No conflicts between games
+These profiles are designed to maximize **FPS, stability, and latency** depending on game type.
 
 ---
 
-### HOW TO CREATE A PROFILE (NVIDIA CONTROL PANEL)
+## ⚔️ FPS / COMPETITIVE PROFILE (MAX PERFORMANCE + LOW LATENCY)
 
-1. Open NVIDIA Control Panel  
-2. Go to: Manage 3D Settings → Program Settings  
-3. Click "Add" and select the game executable (.exe)  
-4. Change settings ONLY for that game  
-5. Click Apply  
+Recommended for:
+Valorant, CS2, Apex, Fortnite, Phasmophobia, Lethal Company, Minecraft PvP
 
-These settings affect ONLY that game.
+Goal:
+Lowest input latency, strongest 1% lows, highest competitive performance.
 
----
+Change ONLY these settings in the game’s Program Profile:
 
-### COMPETITIVE GAME PROFILE (LOW LATENCY MODE)
+| Setting             | Value | Notes |
+| ------------------- | ----- | ----- |
+| Low Latency Mode    | **On** | Use driver queue reduction (Reflex handles final latency) |
+| Vertical Sync       | **Off** | Prevents latency from driver V-Sync |
+| Max Frame Rate      | **Off** | Let in-game limiter or Reflex control pacing |
 
-Recommended for games like CS2 / Valorant / Apex / Fortnite:
+In-game rules:
+- V-Sync → OFF  
+- NVIDIA Reflex → **ON or ON + Boost**  
+- Cap FPS in-game slightly below your stable maximum (example: 300 for Valorant)
 
-- Low Latency Mode → ON (NOT Ultra)  
-
----
-
-### SINGLE-PLAYER / AAA PROFILE (SMOOTH + STABLE)
-
-Recommended for Cyberpunk / RDR2 / GTA / story games:
-
-- Max Frame Rate → Off
-- Power management mode → Normal
-- Vertical Sync → Use 3D application setting
+This profile prioritizes:
+⚡ Lowest input delay  
+⚡ Best hit registration  
+⚡ Strongest CPU thread scheduling  
 
 ---
 
-### BENCHMARK PROFILE (3DMARK / TESTING)
+## 🌄 OPEN-WORLD / AAA / SHADER PROFILE (SMOOTH + STABLE PERFORMANCE)
 
-Recommended for 3DMark and stress tests:
+Recommended for:
+Ghost of Tsushima, Watch Dogs, Cyberpunk, RDR2, Modded Minecraft (Shaders)
 
-- Max Frame Rate → Off
-- Vertical Sync → Off
-- Texture Filtering - Anisotropic sample optimization → On
-- Texture Filtering - Negative LOD bias → Allow
-- Texture Filtering - Quality → High Quality
+Goal:
+Perfect frame pacing, zero tearing, stable clocks, smooth cinematic gameplay.
+
+Change ONLY these settings in the game’s Program Profile:
+
+| Setting                | Value | Notes |
+| ---------------------- | ----- | ----- |
+| Low Latency Mode       | **Off** | Avoids unnecessary queue control in GPU-heavy games |
+| Max Frame Rate         | **Off** | Let G-SYNC + driver pacing handle smoothness |
+| Vertical Sync          | **Use 3D application setting** | Allows game / engine pacing control |
+| Power management mode | **Normal** | Prevents unnecessary max clocks & heat in long sessions |
+
+In-game rules:
+- V-Sync → OFF  
+- Use DLSS / FSR / Frame Gen if available  
+- Let G-SYNC + driver V-Sync handle tearing prevention  
+
+This profile prioritizes:
+🌊 Smooth frametimes  
+🌊 No tearing  
+🌊 Stable clocks  
+🌊 Best visual experience  
+
+---
+
+## 🧪 BENCHMARK / TESTING PROFILE (MAX RAW SCORE MODE)
+
+Recommended for:
+3DMark, stress tests, tuning validation
+
+Goal:
+Remove all limits and smoothing for maximum benchmark score.
+
+Change ONLY these settings in the benchmark Program Profile:
+
+| Setting                                  | Value |
+| ---------------------------------------- | ----- |
+| Low Latency Mode                         | **Off** |
+| Max Frame Rate                           | **Off** |
+| Vertical Sync                            | **Off** |
+| Texture filtering – Anisotropic sample optimization | **On** |
+| Texture filtering – Negative LOD bias    | **Allow** |
+| Texture filtering – Quality              | **High performance** |
+
+This profile prioritizes:
+🔥 Highest possible FPS  
+🔥 Maximum benchmark score  
+🔥 No artificial caps or smoothing  
+
+---
+
+## 🔹 IMPORTANT NOTES
+
+* If a setting is NOT listed above → **Keep Global Defaults**
+* Always use per-game profiles — never mix aggressive settings into Global
+* Competitive and AAA profiles can safely coexist
+* Benchmark profile should ONLY be used for testing (not daily gaming)
 
 ---
 
