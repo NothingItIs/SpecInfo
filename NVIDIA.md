@@ -79,8 +79,8 @@ Change ONLY these settings in the game’s Program Profile:
 | Setting             | Value | Notes |
 | ------------------- | ----- | ----- |
 | Low Latency Mode    | **On** | Use driver queue reduction (Reflex handles final latency) |
-| Vertical Sync       | **Off** | Prevents latency from driver V-Sync |
 | Max Frame Rate      | **Off** | Let in-game limiter or Reflex control pacing |
+| Vertical Sync       | **Off** | Prevents latency from driver V-Sync |
 
 In-game rules:
 - V-Sync → OFF  
@@ -106,10 +106,9 @@ Change ONLY these settings in the game’s Program Profile:
 
 | Setting                | Value | Notes |
 | ---------------------- | ----- | ----- |
-| Low Latency Mode       | **Off** | Avoids unnecessary queue control in GPU-heavy games |
 | Max Frame Rate         | **Off** | Let G-SYNC + driver pacing handle smoothness |
-| Vertical Sync          | **Use 3D application setting** | Allows game / engine pacing control |
 | Power management mode | **Normal** | Prevents unnecessary max clocks & heat in long sessions |
+| Vertical Sync          | **Use 3D application setting** | Allows game / engine pacing control |
 
 In-game rules:
 - V-Sync → OFF  
@@ -134,14 +133,13 @@ Remove all limits and smoothing for maximum benchmark score.
 
 Change ONLY these settings in the benchmark Program Profile:
 
-| Setting                                  | Value |
-| ---------------------------------------- | ----- |
-| Low Latency Mode                         | **Off** |
-| Max Frame Rate                           | **Off** |
-| Vertical Sync                            | **Off** |
-| Texture filtering – Anisotropic sample optimization | **On** |
-| Texture filtering – Negative LOD bias    | **Allow** |
-| Texture filtering – Quality              | **High performance** |
+| Setting                                    | Value |
+| -----------------------------------------  | ----- |
+| Max Frame Rate                             | **Off** |
+| Texture filtering – Negative LOD bias      | **Allow** |
+ |Texture filtering – Quality                | **High Quality**|
+| Texture filtering – Trilinear optimisation | **On** |
+| Vertical Sync                              | **Off** |
 
 This profile prioritizes:
 🔥 Highest possible FPS  
