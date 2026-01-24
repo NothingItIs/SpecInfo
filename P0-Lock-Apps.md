@@ -38,6 +38,8 @@ Legend:
 |--------------------------------|-----------|---------|------------------------------|
 | Razer Services (background)    | NO        | ✅ Safe | Normal services do not lock GPU |
 | Razer App / RazerAppEngine.exe | YES       | ❌ Bad  | Opens GPU context, locks P0 |
+|--------------------------------|-----------|---------|------------------------------|
+|Xbox Game Bar + Spotify widget | YES | ❌ Bad | Locks P0 after game exit, ignores Spotify HW accel|
 
 ---
 
