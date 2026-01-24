@@ -23,3 +23,11 @@
 | GPU Max Clock (MHz)                 | 1920                     | 1890                         | 1860                |
 | GPU Avg Temp (°C)                   | 71                       | 69                           | 68                  |
 | Stability                           | Stable                   | Stable                       | Stable              |
+| ----------------------------------- | ------------------------ | ---------------------------- | ------------------- |
+| PBO + Curve Optimizer + NVCP        |                          |                              |                     |
+| Score                               |                          |                              | 4241                |
+| Average FPS                         |                          |                              | 42.41               |
+| GPU Avg Clock (MHz)                 |                          |                              | 1848                |
+| GPU Max Clock (MHz)                 |                          |                              | 1860                |
+| GPU Avg Temp (°C)                   |                          |                              | 67                  |
+| Stability                           |                          |                              | Stable              |
