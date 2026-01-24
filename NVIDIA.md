@@ -49,7 +49,7 @@
 ## 🔹 G-SYNC Page (Set up G-SYNC)
 
 * Enable G-SYNC, G-SYNC Compatible → ✅ Enabled
-* Mode → **Enable for full screen mode only** (recommended for stability)
+* Mode → Windowed and full screen (recommended for stability)
 * Enable settings for selected display model → ✅ Enabled
 
 ---
